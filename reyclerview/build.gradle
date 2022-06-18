@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.github.murillo"
+        applicationId "com.github.reyclerview"
         minSdk 26
         targetSdk 32
         versionCode 1
