@@ -16,6 +16,7 @@ class SortItemsAdapter(var listItems: List<SortItemsType>) :
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bindView(items: SortItemsType) {
             itemView.findViewById<TextView>(R.id.textView).text = items.numbers.toString()
+            itemView.findViewById<TextView>(R.id.txtOrdEr).text = items.txtOrder
         }
     }
 

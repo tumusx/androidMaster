@@ -34,15 +34,9 @@ class SortItemsActivity : AppCompatActivity() {
     private fun onOrderList(){
         val listOrder : MutableList<SortItemsType> = SortItemsType.getListNumber()
         binding.button.setOnClickListener {
-            val list = listOrder.sortedBy { it.numbers
-             }
-            onConfigureAdapter(list)
-        }
+            val list = listOrder.sortedBy { it.numbers }
+            onConfigureAdapter(list) }
         binding.button2.setOnClickListener {
-            onConfigureAdapter(listOrder.sortedByDescending { it.numbers })
-
-            Toast.makeText(this, "CLIQUEI NO BUTTON 2", Toast.LENGTH_SHORT).show() }
+            onConfigureAdapter(listOrder.sortedByDescending { it.numbers })}
     }
-
-
 }
