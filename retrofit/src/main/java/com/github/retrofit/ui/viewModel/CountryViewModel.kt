@@ -1,5 +1,6 @@
 package com.github.retrofit.ui.viewModel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,7 +16,7 @@ class CountryViewModel : ViewModel() {
     private val items = MutableLiveData<List<CountryModel>>()
     private val service = CountryService()
 
-    val itemsLiveData: LiveData<List<CountryModel>>
+    val country: LiveData<List<CountryModel>>
         get() = items
 
     fun getCountry() {
@@ -24,6 +25,7 @@ class CountryViewModel : ViewModel() {
             if (response.isSuccessful) {
                 withContext(Dispatchers.Main) {
                     items.value = response.body()
+                    Log.d("BRAZIL", response.body().toString())
                 }
             } else {
                 messageError.postValue(response.errorBody().toString())

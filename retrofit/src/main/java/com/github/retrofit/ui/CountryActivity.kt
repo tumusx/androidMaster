@@ -2,7 +2,6 @@ package com.github.retrofit.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.retrofit.databinding.ActivityCountryBinding
@@ -19,19 +18,17 @@ class CountryActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(CountryViewModel::class.java)
         setContentView(binding.root)
         onConfigureUI()
+        viewModel.getCountry()
     }
 
     private fun onConfigureUI() {
-
         binding.recyclerView.apply {
             adapter = myAdapter
             layoutManager = LinearLayoutManager(this@CountryActivity)
         }
 
-        viewModel.getCountry()
-
-        viewModel.itemsLiveData.observe(this@CountryActivity, Observer { countries ->
-            myAdapter.update(countries)
-        })
+        viewModel.country.observe(this@CountryActivity) { countries ->
+            myAdapter.update(countries.sortedByDescending { it.name })
+        }
     }
 }
