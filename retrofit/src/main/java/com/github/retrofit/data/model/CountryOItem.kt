@@ -1,4 +1,4 @@
-package com.github.retrofit.data
+package com.github.retrofit.data.model
 
 data class CountryOItem(
     val alpha2Code: String,

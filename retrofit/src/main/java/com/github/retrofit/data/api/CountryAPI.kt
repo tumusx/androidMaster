@@ -1,6 +1,6 @@
-package com.github.retrofit.data
+package com.github.retrofit.data.api
 
-import okhttp3.Response
+import com.github.retrofit.data.model.CountryModel
 import retrofit2.http.GET
 
 interface CountryAPI {

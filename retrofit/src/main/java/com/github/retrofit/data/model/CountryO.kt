@@ -1,3 +1,3 @@
-package com.github.retrofit.data
+package com.github.retrofit.data.model
 
 class CountryO : ArrayList<CountryOItem>()

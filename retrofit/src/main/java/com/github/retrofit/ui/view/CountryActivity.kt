@@ -1,4 +1,4 @@
-package com.github.retrofit.ui
+package com.github.retrofit.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

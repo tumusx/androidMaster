@@ -1,4 +1,4 @@
-package com.github.retrofit.data
+package com.github.retrofit.data.model
 
 data class Language(
     val iso639_1: String,

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.retrofit.R
-import com.github.retrofit.data.CountryModel
+import com.github.retrofit.data.model.CountryModel
 
 class CountryAdapter(private val items: MutableList<CountryModel>) : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
